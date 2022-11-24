@@ -48,6 +48,20 @@
 		</dict>
 		<dict>
 			<key>Description</key>
+			<string>Use ReducerProtocol</string>
+			<key>Default</key>
+			<string>false</string>
+			<key>Identifier</key>
+			<string>ReducerProtocol</string>
+			<key>Name</key>
+			<string>Use ReducerProtocol</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Type</key>
+			<string>checkbox</string>
+		</dict>
+		<dict>
+			<key>Description</key>
 			<string>Add file header comments</string>
 			<key>Default</key>
 			<string>false</string>
