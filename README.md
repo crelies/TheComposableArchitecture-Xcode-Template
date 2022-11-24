@@ -5,7 +5,8 @@
 <a href="https://en.wikipedia.org/wiki/MIT_License"><img src="https://img.shields.io/badge/license-MIT-lightgray.svg?longCache=true&style=flat-square" alt="MIT license"/></a>
 
 This repository contains a SwiftUI Xcode template for [The Composable Architecture (short: TCA)](https://github.com/pointfreeco/swift-composable-architecture).
-Quickly create all TCA components and focus on coding.
+
+Quickly create all components of a TCA stack using the template in Xcode and focus on implementing your feature 🚀
 
 ![Xcode dialog](https://github.com/crelies/TheComposableArchitecture-Xcode-Template/blob/main/xcode-dialog.png)
 
@@ -14,6 +15,10 @@ Quickly create all TCA components and focus on coding.
 Use the install script.
 
 ```swift install.swift```
+
+ℹ️ **If the script fails for whatever reason just copy the `TheComposableArchitecture.xctemplate` directory into the directory `/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project Templates/iOS/Application`.**
+
+⚠️ This template is a **project template** (*not a file template*). That's why Xcode does not show the template in the *new file wizard* when you are working on a *Swift package* (*when you opened a Package.swift with Xcode*).
 
 ## 🤖 Author
 
