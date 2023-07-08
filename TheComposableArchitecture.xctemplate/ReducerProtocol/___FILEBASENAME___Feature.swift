@@ -1,6 +1,6 @@
 import ComposableArchitecture
 
-struct ___VARIABLE_MODULENAME___Module: ReducerProtocol {
+struct ___VARIABLE_MODULENAME___Feature: ReducerProtocol {
     struct State: Equatable {}
 
     enum Action: Equatable {

@@ -11,15 +11,11 @@
 
 import ComposableArchitecture
 
-struct ___VARIABLE_MODULENAME___Module: ReducerProtocol {
-    struct State: Equatable {}
+enum ___VARIABLE_MODULENAME___Feature {}
 
-    enum Action: Equatable {
-        case onAppear
-    }
-
-    var body: some ReducerProtocol<State, Action> {
-        Reduce { state, action in
+extension ___VARIABLE_MODULENAME___Feature {
+    static var reducer: Reducer<___VARIABLE_MODULENAME___State, ___VARIABLE_MODULENAME___Action, ___VARIABLE_MODULENAME___Environment> {
+        .init { state, action, environment in
             return .none
         }
     }
