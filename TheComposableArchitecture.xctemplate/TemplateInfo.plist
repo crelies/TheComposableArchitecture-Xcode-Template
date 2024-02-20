@@ -48,17 +48,51 @@
 		</dict>
 		<dict>
 			<key>Description</key>
-			<string>Use ReducerProtocol</string>
+			<string>Use Bindings</string>
 			<key>Default</key>
 			<string>false</string>
 			<key>Identifier</key>
-			<string>ReducerProtocol</string>
+			<string>UseBindings</string>
 			<key>Name</key>
-			<string>Use ReducerProtocol</string>
+			<string>Use Bindings</string>
 			<key>Required</key>
 			<string>YES</string>
 			<key>Type</key>
 			<string>checkbox</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Use Macros</string>
+			<key>Default</key>
+			<string>false</string>
+			<key>Identifier</key>
+			<string>UseMacros</string>
+			<key>Name</key>
+			<string>Use Macros</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Type</key>
+			<string>checkbox</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Observation type</string>
+			<key>Default</key>
+			<string>None</string>
+			<key>Identifier</key>
+			<string>ObservationType</string>
+			<key>Name</key>
+			<string>Observation type</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Values</key>
+			<array>
+			<string>None</string>
+			<string>iOS-16</string>
+			<string>iOS-17</string>
+			</array>
 		</dict>
 		<dict>
 			<key>Description</key>
