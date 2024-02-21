@@ -68,7 +68,7 @@
 			<key>Identifier</key>
 			<string>UseMacros</string>
 			<key>Name</key>
-			<string>Use Macros</string>
+			<string>Use Macros (only affects the observation WithViewStore)</string>
 			<key>Required</key>
 			<string>YES</string>
 			<key>Type</key>
@@ -78,7 +78,7 @@
 			<key>Description</key>
 			<string>Observation type</string>
 			<key>Default</key>
-			<string>None</string>
+			<string>WithViewStore</string>
 			<key>Identifier</key>
 			<string>ObservationType</string>
 			<key>Name</key>
@@ -89,7 +89,7 @@
 			<string>popup</string>
 			<key>Values</key>
 			<array>
-			<string>None</string>
+			<string>WithViewStore</string>
 			<string>iOS-16</string>
 			<string>iOS-17</string>
 			</array>
