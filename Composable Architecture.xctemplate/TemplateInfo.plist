@@ -102,9 +102,8 @@
 			<key>Values</key>
 			<array>
 			<string>WithViewStore</string>
-			<string>PerceptionBackport</string>
-			<string>iOS-16</string>
-			<string>iOS-17</string>
+			<string>Perception</string>
+			<string>Observation</string>
 			</array>
 		</dict>
 		<dict>
