@@ -11,14 +11,13 @@
 
 import ComposableArchitecture
 
-@Reducer
-struct ___VARIABLE_MODULENAME___Feature {
-    @ObservableState
+struct ___VARIABLE_MODULENAME___Feature: Reducer {
+    @Perceptible
     struct State: Equatable {
 
     }
 
-    enum Action: Equatable, ViewAction {
+    enum Action: Equatable {
         enum View: Equatable {}
 
         case view(View)

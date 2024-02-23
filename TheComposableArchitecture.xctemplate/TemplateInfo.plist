@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SupportsSwiftPackage</key>
+	<true/>
 	<key>AllowedTypes</key>
 	<array>
 		<string>public.swift-source</string>
@@ -9,11 +11,14 @@
 	<key>Platforms</key>
 	<array>
 		<string>com.apple.platform.iphoneos</string>
+		<string>com.apple.platform.macosx</string>
+		<string>com.apple.platform.appletvos</string>
+		<string>com.apple.platform.watchos</string>
 	</array>
 	<key>DefaultCompletionName</key>
-	<string>SwiftTCAComponents</string>
+	<string>MyFeature</string>
 	<key>Description</key>
-	<string>TheComposableArchitecture Components</string>
+	<string>A Composable Architecture feature</string>
 	<key>Kind</key>
 	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
 	<key>MainTemplateFile</key>
@@ -26,7 +31,7 @@
 	<array>
 		<dict>
 			<key>Description</key>
-			<string>Name of feature you want to implement</string>
+			<string>Name of the feature you want to implement</string>
 			<key>Default</key>
 			<string></string>
 			<key>Identifier</key>
@@ -48,7 +53,7 @@
 		</dict>
 		<dict>
 			<key>Description</key>
-			<string>Use Bindings</string>
+			<string>Indicates if a bindable setup should be added to your feature</string>
 			<key>Default</key>
 			<string>false</string>
 			<key>Identifier</key>
@@ -62,27 +67,34 @@
 		</dict>
 		<dict>
 			<key>Description</key>
-			<string>Use Macros</string>
+			<string>Indicates if macros, like the Reducer one, should be used on your feature</string>
 			<key>Default</key>
 			<string>false</string>
 			<key>Identifier</key>
 			<string>UseMacros</string>
 			<key>Name</key>
-			<string>Use Macros (only affects the observation WithViewStore)</string>
+			<string>Use Macros also with the WithViewStore observation</string>
 			<key>Required</key>
 			<string>YES</string>
 			<key>Type</key>
 			<string>checkbox</string>
+			<key>RequiredOptions</key>
+			<dict>
+				<key>ObservationType</key>
+				<array>
+					<string>WithViewStore</string>
+				</array>
+			</dict>
 		</dict>
 		<dict>
 			<key>Description</key>
-			<string>Observation type</string>
+			<string>Specifies the type of observation which should be added</string>
 			<key>Default</key>
 			<string>WithViewStore</string>
 			<key>Identifier</key>
 			<string>ObservationType</string>
 			<key>Name</key>
-			<string>Observation type</string>
+			<string>Observation type:</string>
 			<key>Required</key>
 			<string>YES</string>
 			<key>Type</key>
@@ -90,13 +102,14 @@
 			<key>Values</key>
 			<array>
 			<string>WithViewStore</string>
+			<string>PerceptionBackport</string>
 			<string>iOS-16</string>
 			<string>iOS-17</string>
 			</array>
 		</dict>
 		<dict>
 			<key>Description</key>
-			<string>Add file header comments</string>
+			<string>Indicates if header comments should be added to the generated files</string>
 			<key>Default</key>
 			<string>false</string>
 			<key>Identifier</key>

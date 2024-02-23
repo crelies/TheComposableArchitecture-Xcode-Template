@@ -16,7 +16,7 @@ struct ___VARIABLE_MODULENAME___Feature {
     }
 
     var body: some ReducerOf<Self> {
-        BindingReducer(action: /Action.view)
+        BindingReducer(action: \.view)
 
         Reduce { state, action in
             return .none
