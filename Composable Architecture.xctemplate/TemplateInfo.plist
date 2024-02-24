@@ -19,6 +19,8 @@
 	<string>MyFeature</string>
 	<key>Description</key>
 	<string>A Composable Architecture feature</string>
+	<key>Summary</key>
+	<string>A Composable Architecture feature</string>
 	<key>Kind</key>
 	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
 	<key>MainTemplateFile</key>
@@ -105,6 +107,34 @@
 			<string>Perception</string>
 			<string>Observation</string>
 			</array>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Indicates if a dependency client should be created for your feature</string>
+			<key>Default</key>
+			<string>false</string>
+			<key>Identifier</key>
+			<string>CreateDependencyClient</string>
+			<key>Name</key>
+			<string>Also create a dependency client</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Type</key>
+			<string>checkbox</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Indicates if a destination feature should be added to your feature</string>
+			<key>Default</key>
+			<string>false</string>
+			<key>Identifier</key>
+			<string>CreateDestinationFeature</string>
+			<key>Name</key>
+			<string>Also create a destination feature</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Type</key>
+			<string>checkbox</string>
 		</dict>
 		<dict>
 			<key>Description</key>
