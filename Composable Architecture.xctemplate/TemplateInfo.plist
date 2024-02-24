@@ -61,7 +61,7 @@
 			<key>Identifier</key>
 			<string>UseBindings</string>
 			<key>Name</key>
-			<string>Use Bindings</string>
+			<string>Setup Bindable</string>
 			<key>Required</key>
 			<string>YES</string>
 			<key>Type</key>
@@ -75,7 +75,7 @@
 			<key>Identifier</key>
 			<string>UseMacros</string>
 			<key>Name</key>
-			<string>Use Macros also with the WithViewStore observation</string>
+			<string>Add Macros also when using the WithViewStore observation</string>
 			<key>Required</key>
 			<string>YES</string>
 			<key>Type</key>
