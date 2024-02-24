@@ -69,6 +69,26 @@
 		</dict>
 		<dict>
 			<key>Description</key>
+			<string>Specifies the type of observation which should be added</string>
+			<key>Default</key>
+			<string>WithViewStore</string>
+			<key>Identifier</key>
+			<string>ObservationType</string>
+			<key>Name</key>
+			<string>Observation type:</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Values</key>
+			<array>
+			<string>WithViewStore</string>
+			<string>Perception</string>
+			<string>Observation</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Description</key>
 			<string>Indicates if macros, like the Reducer one, should be used on your feature</string>
 			<key>Default</key>
 			<string>false</string>
@@ -87,26 +107,6 @@
 					<string>WithViewStore</string>
 				</array>
 			</dict>
-		</dict>
-		<dict>
-			<key>Description</key>
-			<string>Specifies the type of observation which should be added</string>
-			<key>Default</key>
-			<string>WithViewStore</string>
-			<key>Identifier</key>
-			<string>ObservationType</string>
-			<key>Name</key>
-			<string>Observation type:</string>
-			<key>Required</key>
-			<string>YES</string>
-			<key>Type</key>
-			<string>popup</string>
-			<key>Values</key>
-			<array>
-			<string>WithViewStore</string>
-			<string>Perception</string>
-			<string>Observation</string>
-			</array>
 		</dict>
 		<dict>
 			<key>Description</key>
