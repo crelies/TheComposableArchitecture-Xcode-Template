@@ -17,7 +17,7 @@ struct ___VARIABLE_MODULENAME___Feature {
 
     }
 
-    enum Action: Equatable, ViewAction {
+    enum Action: Equatable {
         enum View: Equatable {}
 
         case view(View)

@@ -7,14 +7,15 @@ enum Constants {
     }
 
     enum File {
-        static let templateName = "TheComposableArchitecture.xctemplate"
+        static let templateName = "Composable Architecture.xctemplate"
         static let destinationRelativePath = "/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project Templates/iOS/Application"
     }
 
     enum Messages {
         static let successMessage = "✅  Template was installed succesfully 🎉. Enjoy it 🙂"
         static let successfullReplaceMessage = "✅  The Template has been replaced for you with the new version 🎉. Enjoy it 🙂"
-        static let errorMessage = "❌  Ooops! Something went wrong 😡"
+        static let failedToCopyMessage = "❌ Template was not copied 😡:"
+        static let failedToReplaceMessage = "❌ Template was not replaced 😡:"
         static let exitMessage = "Bye Bye 👋"
         static let promptReplace = "That Template already exists. Do you want to replace it? (y or n)"
     }
@@ -31,40 +32,43 @@ func printToConsole(_ message:Any) {
 }
 
 func moveTemplate() {
-    do {
-        let fileManager = FileManager.default
-        let destinationPath = bash(command: "xcode-select", arguments: ["--print-path"]).appending(Constants.File.destinationRelativePath)
+    let fileManager = FileManager.default
+    let destinationPath = bash(command: "xcode-select", arguments: ["--print-path"]).appending(Constants.File.destinationRelativePath)
 
-        printToConsole("Template will be copied to: \(destinationPath)")
+    printToConsole("Template will be copied to: \(destinationPath)")
 
-        if !fileManager.fileExists(atPath: "\(destinationPath)/\(Constants.File.templateName)") {
+    if !fileManager.fileExists(atPath: "\(destinationPath)/\(Constants.File.templateName)") {
+        do {
             try fileManager.copyItem(atPath: Constants.File.templateName, toPath: "\(destinationPath)/\(Constants.File.templateName)")
             printToConsole(Constants.Messages.successMessage)
-        } else {
-            print(Constants.Messages.promptReplace)
-
-            var input = ""
-            repeat {
-                guard let textFormCommandLine = readLine(strippingNewline: true) else {
-                    continue
-                }
-                input = textFormCommandLine
-            } while(input != Constants.CommandLineValues.yes && input != Constants.CommandLineValues.no)
-
-            if input == Constants.CommandLineValues.yes {
-                try replaceItemAt(URL(fileURLWithPath: "\(destinationPath)/\(Constants.File.templateName)"), withItemAt: URL(fileURLWithPath: Constants.File.templateName))
-                printToConsole(Constants.Messages.successfullReplaceMessage)
-            } else {
-                print(Constants.Messages.exitMessage)
-            }
+        } catch {
+            printToConsole(Constants.Messages.failedToCopyMessage + " \(error.localizedDescription)")
         }
-    } catch let error as NSError {
-        printToConsole("\(Constants.Messages.errorMessage) : \(error.localizedFailureReason!)")
+    } else {
+        print(Constants.Messages.promptReplace)
+
+        var input = ""
+        repeat {
+            guard let textFormCommandLine = readLine(strippingNewline: true) else {
+                continue
+            }
+            input = textFormCommandLine
+        } while(input != Constants.CommandLineValues.yes && input != Constants.CommandLineValues.no)
+
+        if input == Constants.CommandLineValues.yes {
+            do {
+                try replaceItemAt(fileManager: fileManager, URL(fileURLWithPath: "\(destinationPath)/\(Constants.File.templateName)"), withItemAt: URL(fileURLWithPath: Constants.File.templateName))
+                printToConsole(Constants.Messages.successfullReplaceMessage)
+            } catch {
+                printToConsole(Constants.Messages.failedToReplaceMessage + " \(error.localizedDescription)")
+            }
+        } else {
+            print(Constants.Messages.exitMessage)
+        }
     }
 }
 
-func replaceItemAt(_ url: URL, withItemAt itemAtUrl: URL) throws {
-    let fileManager = FileManager.default
+func replaceItemAt(fileManager: FileManager, _ url: URL, withItemAt itemAtUrl: URL) throws {
     try fileManager.removeItem(at: url)
     try fileManager.copyItem(atPath: itemAtUrl.path, toPath: url.path)
 }

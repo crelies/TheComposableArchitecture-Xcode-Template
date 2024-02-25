@@ -28,7 +28,7 @@ struct ___VARIABLE_MODULENAME___Feature {
         @PresentationState var destination: Destination.State?
     }
 
-    enum Action: Equatable, ViewAction {
+    enum Action: Equatable {
         enum View: Equatable {}
 
         case destination(PresentationAction<Destination.Action>)
