@@ -8,7 +8,7 @@ This repository contains a SwiftUI Xcode template for [The Composable Architectu
 
 Quickly create all components of a TCA stack using the template in Xcode and focus on implementing your feature 🚀
 
-![Xcode dialog](https://github.com/crelies/TheComposableArchitecture-Xcode-Template/blob/main/xcode-dialog.png)
+![Xcode dialog](https://github.com/crelies/TheComposableArchitecture-Xcode-Template/blob/feature/1.7.x/xcode-dialog.png)
 
 ## Features
 
@@ -17,7 +17,7 @@ Quickly create all components of a TCA stack using the template in Xcode and foc
 | Observation type: WithViewStore | Default view store observation | 5.7.0 | 1.0.0 |
 | WithViewStore observation with Macros  | Indicates if macros, like @Reducer, should be used | 5.9.0 | 1.4.0 |
 | Observation type: Perception | Backport for older OS versions | 5.9.0 | 1.7.0 |
-| Observation type: Observation | New Observation framework | 5.9.0 | 1.7.0 |
+| Observation type: Observation | Apple's new Observation framework | 5.9.0 | 1.7.0 |
 | Setup Bindable | Bindable setup added to the feature (BindableAction) | 5.7.0 | 1.0.0 |
 | Create DependencyClient | Client definition generated for the feature | 5.7.0 | 1.0.0 |
 | Create DestinationFeature | Destination feature added as child reducer | 5.7.0 | 1.0.0 |
