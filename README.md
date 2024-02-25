@@ -10,7 +10,7 @@ Quickly create all components of a TCA stack using the template in Xcode and foc
 
 ![Xcode dialog](https://github.com/crelies/TheComposableArchitecture-Xcode-Template/blob/feature/1.7.x/xcode-dialog.png)
 
-## Features
+## 🪄 Features
 
 | Name | Description | min. Swift version | min. TCA version |
 | ------------ | ------------------- | ------------------ | ---------------- |
