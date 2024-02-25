@@ -46,7 +46,8 @@ the directory `/Applications/<Your-Xcode>.app/Contents/Developer/Platforms/iPhon
 
 ## 🤔 Keep in mind
 
-If you install a new Xcode version you have to run the above install script again because this custom template comes not bundled with a new Xcode version 😉 Maybe it should 😂 What do you think?
+1. If you install a new Xcode version you have to run the above install script again because this custom template comes not bundled with a new Xcode version 😉 Maybe it should 😂 What do you think?
+2. This template is a **file template**, so you only see it **when using the `New file` wizard in Xcode**! I know that this is confusing because the template directory itself is stored inside of the *project templates directory* of Xcode.
 
 ## 🤖 Author
 
