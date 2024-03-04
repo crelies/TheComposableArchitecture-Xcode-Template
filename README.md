@@ -35,7 +35,13 @@ Quickly create all components of a TCA stack using the template in Xcode and foc
 
 ```swift install.swift```
 
-⚠️ **Attention:** If the script fails for whatever reason just **manually copy** the `Composable Architecture.xctemplate` directory into
+⚠️ **Attention:** *macOS* includes a lot of security features, one of them limits *the access rights a tool has to the data on your disk*.
+By default macOS **prevents** applications from writing data to your disk. A user needs to explicitly grant permission to allow writing to the disk.
+That's why the above command might fail in your terminal application. You could grant your terminal application *full disk access* to allow it to write to your disk through the *system settings of macOS*:
+
+![macOS system settings - full disk access](https://github.com/crelies/TheComposableArchitecture-Xcode-Template/blob/feature/1.7.x/full-disk-access.jpg)
+
+If the script still fails after granting *full disk access* to your terminal application you can still **manually copy** the `Composable Architecture.xctemplate` directory into
 the directory `/Applications/<Your-Xcode>.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project Templates/iOS/Application`.
 
 ---
